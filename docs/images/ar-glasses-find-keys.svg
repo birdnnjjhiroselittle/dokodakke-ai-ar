@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" font-family="'Hiragino Sans','Yu Gothic','Meiryo',sans-serif">
+  <title>どこだっけAI ARグラス版：ARグラス越しに見たリビング。本棚の鍵が枠で囲まれ、矢印と答えが表示されている</title>
+  <defs>
+    <clipPath id="lens"><path d="M70 120 Q70 70 130 70 L400 70 Q450 70 462 110 L480 160 L498 110 Q510 70 560 70 L830 70 Q890 70 890 120 L890 400 Q890 470 820 470 L590 470 Q530 470 515 420 L480 320 L445 420 Q430 470 370 470 L140 470 Q70 470 70 400 Z"/></clipPath>
+    <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6efe4"/><stop offset="1" stop-color="#e8dcc8"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+
+  <rect width="960" height="560" fill="#2b2f3a"/>
+
+  <!-- 部屋の景色（レンズの中） -->
+  <g clip-path="url(#lens)">
+    <rect x="60" y="60" width="840" height="420" fill="url(#wall)"/>
+    <rect x="60" y="380" width="840" height="100" fill="#c9a77c"/>
+    <!-- 窓 -->
+    <rect x="120" y="110" width="170" height="150" fill="#cfe8f7" stroke="#fff" stroke-width="8"/>
+    <line x1="205" y1="110" x2="205" y2="260" stroke="#fff" stroke-width="6"/>
+    <!-- ソファ -->
+    <rect x="110" y="300" width="250" height="90" rx="20" fill="#7d9bb5"/>
+    <rect x="110" y="280" width="250" height="40" rx="16" fill="#8fadc6"/>
+    <!-- 本棚 -->
+    <rect x="560" y="110" width="250" height="290" fill="#9b6b43"/>
+    <rect x="575" y="125" width="220" height="70" fill="#7a5233"/>
+    <rect x="575" y="205" width="220" height="70" fill="#7a5233"/>
+    <rect x="575" y="285" width="220" height="100" fill="#7a5233"/>
+    <!-- 本 -->
+    <g>
+      <rect x="585" y="140" width="16" height="55" fill="#d9534f"/><rect x="603" y="135" width="14" height="60" fill="#5bc0de"/>
+      <rect x="619" y="145" width="18" height="50" fill="#f0ad4e"/><rect x="639" y="138" width="14" height="57" fill="#5cb85c"/>
+      <rect x="700" y="140" width="16" height="55" fill="#6f5bb5"/><rect x="718" y="135" width="18" height="60" fill="#e8e8e8"/>
+      <rect x="690" y="225" width="16" height="50" fill="#5bc0de"/><rect x="708" y="220" width="14" height="55" fill="#d9534f"/>
+      <rect x="724" y="228" width="18" height="47" fill="#f0ad4e"/><rect x="744" y="222" width="16" height="53" fill="#5cb85c"/>
+      <rect x="590" y="310" width="60" height="75" fill="#b8b8b8"/><rect x="670" y="330" width="110" height="55" fill="#8a8a8a"/>
+    </g>
+    <!-- 写真立て -->
+    <rect x="752" y="140" width="34" height="44" fill="#fff" stroke="#555" stroke-width="3"/>
+    <!-- 鍵（2段目の左） -->
+    <g transform="translate(612 252)">
+      <circle cx="0" cy="0" r="9" fill="none" stroke="#c9c9c9" stroke-width="4"/>
+      <rect x="8" y="-3" width="30" height="6" fill="#d4d4d4"/>
+      <rect x="30" y="3" width="4" height="7" fill="#d4d4d4"/><rect x="22" y="3" width="4" height="5" fill="#d4d4d4"/>
+      <rect x="-22" y="-8" width="14" height="22" rx="4" fill="#2f7de1"/>
+    </g>
+
+    <!-- AR表示：鍵を囲む枠 -->
+    <g filter="url(#glow)">
+      <rect x="578" y="230" width="80" height="44" rx="8" fill="none" stroke="#25e6c8" stroke-width="4" stroke-dasharray="14 6"/>
+      <!-- 矢印 -->
+      <path d="M470 300 Q530 290 568 262" fill="none" stroke="#25e6c8" stroke-width="6" stroke-linecap="round"/>
+      <path d="M552 256 L572 258 L566 277" fill="none" stroke="#25e6c8" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+      <!-- ラベル -->
+    </g>
+    <g>
+      <rect x="560" y="405" width="250" height="46" rx="10" fill="#0d2f3a" fill-opacity="0.82" stroke="#25e6c8" stroke-width="2"/>
+      <text x="685" y="426" text-anchor="middle" font-size="16" fill="#25e6c8" font-weight="bold">鍵（青いキーホルダー）</text>
+      <text x="685" y="445" text-anchor="middle" font-size="13" fill="#d8fff8">本棚 2段目・左はし ／ 14:32 に置いた</text>
+    </g>
+
+    <!-- 視界の端の小さな状態表示 -->
+    <g>
+      <circle cx="140" cy="440" r="6" fill="#25e6c8"/>
+      <text x="152" y="445" font-size="13" fill="#3b4a55">どこだっけAI：置いた瞬間だけ記録中</text>
+    </g>
+  </g>
+
+  <!-- グラスのフレーム -->
+  <path d="M70 120 Q70 70 130 70 L400 70 Q450 70 462 110 L480 160 L498 110 Q510 70 560 70 L830 70 Q890 70 890 120 L890 400 Q890 470 820 470 L590 470 Q530 470 515 420 L480 320 L445 420 Q430 470 370 470 L140 470 Q70 470 70 400 Z" fill="none" stroke="#111" stroke-width="18" stroke-linejoin="round"/>
+  <line x1="40" y1="110" x2="70" y2="115" stroke="#111" stroke-width="16" stroke-linecap="round"/>
+  <line x1="920" y1="110" x2="890" y2="115" stroke="#111" stroke-width="16" stroke-linecap="round"/>
+  <!-- カメラ -->
+  <circle cx="860" cy="92" r="9" fill="#333" stroke="#666" stroke-width="3"/>
+  <circle cx="860" cy="92" r="3" fill="#25e6c8"/>
+
+  <!-- 会話の吹き出し -->
+  <g>
+    <rect x="70" y="490" width="250" height="52" rx="26" fill="#fff"/>
+    <text x="195" y="523" text-anchor="middle" font-size="20" fill="#222">🗣 「鍵どこ？」</text>
+    <rect x="340" y="490" width="550" height="52" rx="26" fill="#25e6c8"/>
+    <text x="615" y="523" text-anchor="middle" font-size="18" fill="#08303a">🔊 「14時32分、本棚の2段目に置きました」</text>
+  </g>
+  <text x="480" y="40" text-anchor="middle" font-size="22" fill="#fff" font-weight="bold">どこだっけAI ARグラス版 — 見ているだけで覚え、聞けば矢印で教える</text>
+</svg>
